@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+</head>
+<style>
+
+header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 10px;
+    margin: 1rem;
+    border-radius: 3rem;
+    background-position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    object-fit: cover;
+
+    overflow-y: scroll;
+}
+
+.navbar {
+    display: flex;
+    padding: 22px 0;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.navbar .hamburger-btn {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.navbar .logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.navbar .links a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+    color: #EBAC06;
+}
+
+.navbar .login-btn {
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #275360;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.navbar .login-btn:hover {
+    background: #ddd;
+}
+   
+   @media (max-width: 950px) {
+    .navbar :is(.hamburger-btn, .close-btn) {
+        display: block;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar .logo img {
+        display: none;
+    }
+
+    .navbar .logo h2 {
+        font-size: 1.4rem;
+    }
+
+    .navbar .links {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        left: -100%;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        padding-top: 60px;
+        text-align: center;
+        background: #fff;
+        transition: 0.2s ease;
+    }
+
+    .navbar .links.show-menu {
+        left: 0;
+    }
+
+    .navbar .links a {
+        display: inline-flex;
+        margin: 20px 0;
+        font-size: 1.2rem;
+        color: #000;
+        z-index: 1111;
+    }
+
+    .navbar .links li:hover {
+        color: #EBAC06 !important;
+    }
+
+    .navbar .login-btn {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+}
+
+
+
+
+    body{
+    background-color: #353B74;
+    font-family: Arial, sans-serif;
+}
+    .contact {
+    background: #353B74;
+    min-height: 60vh;
+    padding-left:13rem;
+}
+
+.contact .container {
+    max-width: 1050px;
+    width: 100%;
+    background: #fff;
+    border-radius: 1.5rem;
+    margin: 2rem 5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background: #353B74;
+
+}
+
+.contact .container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 2rem;
+}
+
+.contact .content .image-box {
+    max-width: 60%;
+    margin-left: 4rem;
+}
+
+.contact .content .image-box img {
+    width: 100%;
+    height: 40rem;
+    position: relative;
+}
+form{
+    background-color: #5D6290;
+}
+
+.contact .content form {
+    width: 90%;
+    margin-right: 3.5rem;
+    border-radius: 1rem;
+}
+
+form .form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-group .field {
+    height: 50px;
+    display: flex;
+    position: relative;
+    margin: 1rem;
+
+}
+
+form i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: rgb(51, 51, 51);
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+form .field input,
+form .message textarea {
+    width: 90%;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 5px;
+    border: 1px solid rgb(51, 51, 51);
+    background: #e5ecfb;
+}
+
+.field input::placeholder,
+.message textarea::placeholder {
+    color: rgb(51, 51, 51);
+}
+
+.field input:focus,
+.message textarea:focus {
+    padding-left: 47px;
+    border: 2px solid rgb(115, 3, 167);
+}
+
+.field input:focus~i,
+.message textarea:focus~i {
+    color: rgb(115, 3, 167);
+}
+
+form .message {
+    position: relative;
+    margin: 1rem;
+}
+
+form .message i {
+    top: 25px;
+    font-size: 20px;
+    left: 15px;
+}
+
+form .message textarea {
+    min-height: 130px;
+    max-height: 230px;
+    max-width: 100%;
+    min-width: 90%;
+}
+
+form .message textarea::-webkit-scrollbar {
+    width: 0px;
+}
+
+form .button-area {
+    display: flex;
+    float: right;
+    flex-direction: row-reverse;
+}
+
+.button-area button {
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 13px 25px;
+    background: #EBAC06;
+    transition: 0.3s ease;
+    font-family: "Nunito", sans-serif;
+}
+
+.button-area button:hover {
+    background: #957219;
+}
+
+.button-area span {
+    font-size: 17px;
+    padding: 1rem;
+    display: none;
+}
+
+.button-area button i {
+    position: relative;
+    top: 6px;
+    left: 2px;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.button-area button:hover i {
+    left: 8px;
+}
+.titre{
+    color: white;
+    padding-left:15px;
+}
+
+</style>
+<body>
+    <header>
+
+        <nav class="navbar">
+            <span class="hamburger-btn material-symbols-rounded">menu</span>
+            <a href="#" class="logo">
+                <img src="iot\image\Group 42.png" alt="logo"></a>
+           
+                <ul class="links">
+                
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Formation</a></li>
+                <li><a href="#">project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+    
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+
+
+        <div class="container">
+            <div class="content">
+
+
+                <form id="contact-form">
+                    <h2 class="heading" style="color: white; padding-left: 20px; font-size: 32px;"><i class="fas fa-headset"></i> Contact <span>Us</span></h2>
+
+                    <div class="form-group">
+                        <div class="titre">Name</div>
+                        <div class="field">
+                             <input type="text" name="name" placeholder="User Name" required>
+                        </div>
+                        <div class="titre">Email</div>
+                        <div class="field">
+                            <input type="text" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="titre">Message</div>
+                        <div class="message">
+                            <textarea placeholder="Message" name="message" required></textarea>
+                        </div>
+                    </div>
+                    <div class="button-area" style="margin-right: 40%; margin-bottom: 10%;" >
+                        <button type="submit">Send </i></button>
+                    </div>
+                </form>
+                <div class="image-box">
+                    <img draggable="false" src="iot\image\Mail sent-amico 1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact section ends -->
+
+</body>
+</html>

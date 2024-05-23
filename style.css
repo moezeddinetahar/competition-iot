@@ -1,0 +1,464 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+body{
+    background-color: #353B74;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+    html {
+    height: 100%;
+}
+
+</style>
+
+   <style>
+   
+   
+   header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0 10px;
+    background: #5D6290;
+    border-top-right-radius: 3rem;
+    border-top-left-radius: 3rem;
+    background-position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    margin-top: 2%;
+
+}
+
+.navbar {
+    display: flex;
+    padding: 22px 0;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.navbar .hamburger-btn {
+    display: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.navbar .logo {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navbar .logo h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.navbar .links a {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.1s ease;
+}
+
+.navbar .links a:hover {
+    color: #EBAC06;
+}
+
+.navbar .login-btn {
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #275360;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.navbar .login-btn:hover {
+    background: #ddd;
+}
+   
+   @media (max-width: 950px) {
+    .navbar :is(.hamburger-btn, .close-btn) {
+        display: block;
+    }
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar .logo img {
+        display: none;
+    }
+
+    .navbar .logo h2 {
+        font-size: 1.4rem;
+    }
+
+    .navbar .links {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        left: -100%;
+        display: block;
+        height: 100vh;
+        width: 100%;
+        padding-top: 60px;
+        text-align: center;
+        background: #fff;
+        transition: 0.2s ease;
+    }
+
+    .navbar .links.show-menu {
+        left: 0;
+    }
+
+    .navbar .links a {
+        display: inline-flex;
+        margin: 20px 0;
+        font-size: 1.2rem;
+        color: #000;
+        z-index: 1111;
+    }
+
+    .navbar .links li:hover {
+        color: #EBAC06 !important;
+    }
+
+    .navbar .login-btn {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+}
+
+
+.home {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    position: absolute;
+    min-height: 100vh;
+    align-items: center;
+    background: #5D6290;
+    padding: 2rem;
+    z-index: 11;
+    margin-top: -6rem ;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    
+
+
+}
+
+.home .content {
+    flex: 1 1 40rem;
+    padding-top: 1rem;
+    z-index: 1;
+    margin-top: 5rem;
+    width: 100%;
+    position: relative;
+}
+
+
+
+.home .image img {
+    width: 70%;
+    margin-left: 6rem;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+
+.home .content h2 {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #002057;
+}
+
+.home .content h2 span {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #ff7b00;
+}
+
+.home .content p {
+    font-size: 28px;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 0;
+    
+}
+
+.home .content p span {
+    font-size: 2.5rem;
+    color: rgb(148, 8, 8);
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+.home .btn {
+    height: 4rem;
+    margin-top: 1rem;
+    line-height: 0;
+    padding: 1.6rem 3rem;
+    border-radius: 1em;
+    transition: 0.5s;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0px 0px 1px rgba(255, 255, 255);
+    font-family: "Nunito", sans-serif;
+    width: ;
+}
+
+.home .btn span {
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 0.1rem;
+}
+
+.home .btn i {
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.home .btn:hover {
+    background: #EBAC06;
+}
+
+.home .btn:hover i {
+    transform: translateX(5px);
+}
+
+
+
+
+   /* social icons start */
+
+.socials {
+    position: relative;
+    margin-top: 9rem;
+}
+
+.socials .social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.socials .social-icons li {
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    display: inline-block;
+    line-height: 44px;
+    color: #fdfdfd;
+
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    margin-right: 8px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+    color: #fff;
+    background-color: #0685da;
+}
+
+.social-icons a.github:hover {
+    background-color: #0e0e0e;
+}
+
+.social-icons a.twitter:hover {
+    background-color: #00aced;
+}
+
+.social-icons a.linkedin:hover {
+    background-color: #007bb6;
+}
+
+.social-icons a.dev:hover {
+    background-color: #070707;
+}
+
+.social-icons a.instagram:hover {
+    background-color: #ee00da;
+}
+
+/* social icons end */
+    .btn1{
+    width: 30rem;
+    height: 15rem;
+    display: flex;
+    justify-content: space-between;
+   }
+   .para{
+    width: 40rem;
+   }
+   .para p{ 
+    font-size: 20px;
+   }
+    
+   </style>
+       <style>
+        body{
+            background-color: #353B74;
+            font-family: Arial, sans-serif;
+        }
+        .about_us{
+            color: white;
+            text-align: center;
+        } 
+        .main{
+            color: white;
+            text-align: center;
+        }
+        .main ul {
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                display: flex;
+            }
+        
+            .main ul li {
+                display: inline-block;
+                vertical-align: top; /* Alignement vertical au-dessus pour maintenir l'alignement des éléments */
+                margin-right: 100px;
+                margin-left: 100px;
+            }
+        
+            .trainings {
+            color: white;
+            text-align: center;
+        }
+        
+        .trainings ul {
+            padding: 0px; /* Ajoute un padding pour l'espace autour des éléments */
+            margin: 0; 
+            list-style-type: none;
+            display: flex;
+        }
+        .trainings ul li {
+                display: inline-block;
+                vertical-align: top; /* Alignement vertical au-dessus pour maintenir l'alignement des éléments */
+                margin-right: 100px;
+                margin-left: 100px;
+                background-color: #5d6290;
+                border-radius: 1rem; 
+                width: 400px;
+               }
+        
+        
+               h2 {
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+        }
+        .team{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-left:-5%;
+        }
+        
+        .team h2 {
+            color: white;
+            text-align: center;
+        }
+        .team .nom{
+            background-color: #EBAC06;
+            width: 8rem;
+            height: 4rem;
+            position: relative;
+            padding: 1rem;
+            top: -40%;
+            border-radius: 1rem;
+            left: 12rem;
+        }
+        
+        
+        .team ul {
+            padding: 0px; /* Ajoute un padding pour l'espace autour des éléments */
+            margin: 0; 
+            list-style-type: none;
+            display: flex;
+            margin-top: 1rem;
+            width: 25rem;
+        }
+        .team ul li {
+            display: grid;
+                vertical-align: top; /* Alignement vertical au-dessus pour maintenir l'alignement des éléments */
+                margin-right: 100px;
+                margin-left: 100px;
+                background-color: #5d6290;
+                border-radius: 1rem; 
+                width: 400px;
+                height: 400px;
+                
+               }
+        .info{
+            width: 20rem;
+            height: 4rem;
+            margin-left: 2rem;
+            position: relative;
+            bottom: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        
+            
+        }
+        
+        
